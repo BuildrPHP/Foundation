@@ -17,6 +17,7 @@ interface ArrayConvertibleInterface {
 
     /**
      * Returns an array that represent the current object data
+     * If this object returns no data an empty array MUST BE returned
      *
      * @return array
      */
