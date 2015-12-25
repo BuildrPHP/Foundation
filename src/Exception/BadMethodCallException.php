@@ -3,7 +3,7 @@
 use BuildR\Foundation\Exception\Exception;
 
 /**
- * This exception will thrown when a provided argument is not valid.
+ * This exception will thrown when a method is not called properly.
  *
  * BuildR PHP Framework
  *
@@ -17,6 +17,6 @@ use BuildR\Foundation\Exception\Exception;
  *
  * @codeCoverageIgnore
  */
-class InvalidArgumentException extends Exception {
+class BadMethodCallException extends Exception {
 
 }

@@ -3,7 +3,8 @@
 use BuildR\Foundation\Exception\Exception;
 
 /**
- * This exception will thrown when a provided argument is not valid.
+ * This exception will thrown when input validation fails, by type
+ * check error, comparison or anything else.
  *
  * BuildR PHP Framework
  *
@@ -17,6 +18,6 @@ use BuildR\Foundation\Exception\Exception;
  *
  * @codeCoverageIgnore
  */
-class InvalidArgumentException extends Exception {
+class UnexpectedValueException extends Exception {
 
 }
