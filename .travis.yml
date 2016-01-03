@@ -19,4 +19,4 @@ before_install:
   - composer install
 
 script:
- - ./vendor/bin/phing -f build.xml travis
+ - ./vendor/bin/phing -f buildTools/build.xml travis
