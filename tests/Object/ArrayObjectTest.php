@@ -26,7 +26,7 @@ class ArrayObjectTest extends \PHPUnit_Framework_TestCase {
     }
 
     public function testArrayConversionWorks() {
-        $result = $this->object->__toArray();
+        $result = $this->object->toArray();
 
         $this->assertCount(2, $result);
         $this->assertTrue(is_array($result));

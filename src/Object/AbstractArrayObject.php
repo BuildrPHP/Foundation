@@ -26,7 +26,7 @@ class AbstractArrayObject implements ArrayObjectInterface {
     /**
      * @inheritDoc
      */
-    public function __toArray() {
+    public function toArray() {
         return $this->data;
     }
 

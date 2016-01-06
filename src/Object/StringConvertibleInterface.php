@@ -22,4 +22,15 @@ interface StringConvertibleInterface {
      */
     public function __toString();
 
+    /**
+     * Converts the object into a string representation. Same as default PHP magic (__toString())
+     * but for compatibility reasons included without the trailing __ characters.
+     * This allow compatibility with other 'Convertible' interface, like ArrayConvertibleInterface.
+     *
+     * Because our coding standard only allow to use the __ character prefix on built-in magic methods.
+     *
+     * @return string
+     */
+    public function toString();
+
 }
