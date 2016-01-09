@@ -21,6 +21,6 @@ interface ArrayConvertibleInterface {
      *
      * @return array
      */
-    public function __toArray();
+    public function toArray();
 
 }
