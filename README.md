@@ -15,9 +15,46 @@
 composer require buildr/foundation
 ```
 
+## Exceptions
+
+This package provide a base `Exception` that used to be a base class for other exceptions inside this project.
+The `BuildR\Foundation\Exception\Exception` also provide a static factory method, that
+allows to easily create exceptions with beautifully formatted message.
+
+In example:
+
+```php
+<?php namespace Test\Package;
+
+use BuildR\Foundation\Exception\Exception;
+
+const MESSAGE_NOT_FOUND = "The element (%s) is not found in position: %s!";
+
+class MyCustomException extends Exception {
+
+}
+```
+#### The `createByFormateMethod`
+
+Method signature:
+```php
+function createByFormat(string $message, array $format, int $code, \Exception $previous);
+```
+
+this method allows you to create exceptions with formatted messages. To populate message this
+function use the `sprintf()` function. In the above example is used like this:
+
+```php
+    ...
+    if($result === FALSE) {
+        throw MyCustomException::createByFormat(MyCustomException::MESSAGE_NOT_FOUND, ['element', 5]);
+    }
+    ...
+```
+
 ## ToDo
 
- - [ ] Finish This Component
+ - [X] Exceptions
 
 ## Contribution
 
