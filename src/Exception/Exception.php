@@ -26,7 +26,7 @@ class Exception extends VanillaException{
      * @param int $code Exception code
      * @param \Exception $previous Previous exception class
      *
-     * @return \Exception
+     * @return static
      */
     public static function createByFormat($message = "", $format = [], $code = 0, VanillaException $previous = NULL) {
         if(!empty($format)) {
