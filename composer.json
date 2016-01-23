@@ -29,7 +29,7 @@
   "require-dev": {
     "phing/phing": "2.*",
     "phpunit/phpunit": "5.*",
-    "phploc/phploc": "2.*",
+    "phploc/phploc": "3.*",
     "sebastian/phpcpd": "2.*",
     "pdepend/pdepend": "2.*",
     "apigen/apigen": "4.*",
