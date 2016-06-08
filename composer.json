@@ -1,19 +1,19 @@
 {
   "name": "buildr/foundation",
   "type": "library",
-  "homepage": "http://buildr-framework.io",
+  "homepage": "https://buildr-framework.io",
   "authors": [
     {
       "name": "Zoltán Borsos",
       "email": "zolli07@gmail.com",
-      "homepage": "http://zolli.hu",
+      "homepage": "https://zolli.hu",
       "role": "Developer"
     }
   ],
   "support": {
-    "issues": "http://project.zolli.hu",
-    "source": "http://project.zolli.hu/diffusion/FOUNDATION/",
-    "docs": "http://docs.buildr-framework.io/foundation"
+    "issues": "https://project.zolli.hu/projects/BC/summary",
+    "source": "https://code.zolli.hu/projects/BC/repos/foundation",
+    "docs": "https://docs.zolli.hu/display/BCFO"
   },
   "description": "BuildR Framework Foundation Component",
   "keywords": [
