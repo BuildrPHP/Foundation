@@ -1,6 +1,6 @@
 <?php namespace BuildR\Foundation\Tests\Exception;
 
-class ChainExceptionTest extends \PHPUnit_Framework_TestCase {
+class AggregatedExceptionTest extends \PHPUnit_Framework_TestCase {
 
     public function testItCountsExceptionProperly() {
         $this->markTestIncomplete();
@@ -10,7 +10,7 @@ class ChainExceptionTest extends \PHPUnit_Framework_TestCase {
         $this->markTestIncomplete();
     }
 
-    public function testItStoreOnlySubclassesOfException() {
+    public function testItStoreOnlyThrowables() {
         $this->markTestIncomplete();
     }
 
