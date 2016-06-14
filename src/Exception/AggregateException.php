@@ -8,7 +8,11 @@ use \ArrayIterator;
 use \Countable;
 
 /**
- * This exception will thrown when a method is not called properly.
+ * Aggregates multiple PHP exception into one exception. Useful when iterating over
+ * large set of objects and call a method on each that might be raise an exception.
+ *
+ * Simply aggregate all thrown exception to this class and throw it when the
+ * iteration is end.
  *
  * BuildR PHP Framework
  *
@@ -22,7 +26,7 @@ use \Countable;
  *
  * @codeCoverageIgnore
  */
-class AggregatedException extends Exception implements \IteratorAggregate, Countable, ArrayConvertibleInterface {
+class AggregateException extends Exception implements \IteratorAggregate, Countable, ArrayConvertibleInterface {
 
     /**
      * @var array
