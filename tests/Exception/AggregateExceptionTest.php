@@ -1,5 +1,6 @@
 <?php namespace BuildR\Foundation\Tests\Exception;
 
+use \stdClass;
 use BuildR\Foundation\Exception\AggregateException;
 use BuildR\Foundation\Object\ArrayConvertibleInterface;
 
@@ -28,10 +29,11 @@ class AggregateExceptionTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException \TypeError
+     * @expectedException PHPUnit_Framework_Error
+     * @expectedExceptionMessage Only subclasses of \Exception and implementations of \Throwable can be aggregated!
      */
     public function testItStoreOnlyThrowable() {
-        $this->aggregateException->add(new \stdClass());
+        $this->aggregateException->add(new stdClass());
     }
 
     public function testItCanReturnValidIterator() {

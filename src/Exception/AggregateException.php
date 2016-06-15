@@ -2,7 +2,6 @@
 
 use BuildR\Foundation\Object\ArrayConvertibleInterface;
 use \Exception;
-use \Throwable;
 use \IteratorAggregate;
 use \ArrayIterator;
 use \Countable;
@@ -36,10 +35,33 @@ class AggregateException extends Exception implements \IteratorAggregate, Counta
     /**
      * Add a new exception to the stack
      *
-     * @param Throwable $throwable
+     * @param \Exception|\Throwable $exception
      */
-    public function add(Throwable $throwable) {
-        $this->collection[] = $throwable;
+    public function add($exception) {
+        if($this->checkException($exception) === FALSE) {
+            trigger_error(
+                'Only subclasses of \Exception and implementations of \Throwable can be aggregated!',
+                E_USER_ERROR
+            );
+        }
+
+        $this->collection[] = $exception;
+    }
+
+    /**
+     * Check the exception
+     *
+     * @param \Throwable|\Exception $exception
+     * @return bool
+     *
+     * @codeCoverageIgnore
+     */
+    private function checkException($exception) {
+        if(version_compare(PHP_VERSION, '7.0.0', '>=')) {
+            return in_array("Throwable", class_implements($exception));
+        }
+
+        return ($exception instanceof Exception);
     }
 
     /**
